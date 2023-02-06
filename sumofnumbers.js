@@ -18,13 +18,6 @@ function sumWhile(array) {
   }
   return sum;
 }
-//
-function sumRecursion(array) {
-  if (array.length === 0) {
-    return 0;
-  }
-  return array.pop() + sumRecursion(array);
-}
 
 function sumTheSimpleWay(array) {
   return _.reduce(array, function (memo, num) {
@@ -32,7 +25,14 @@ function sumTheSimpleWay(array) {
   });
 }
 
+function sumRecursion(array) {
+  if (array.length === 0) {
+    return 0;
+  }
+  return array.pop() + sumRecursion(array);
+}
+
 console.log(sumFor(numbers));
 console.log(sumWhile(numbers));
-console.log(sumRecursion(numbers));
 console.log(sumTheSimpleWay(numbers));
+console.log(sumRecursion(numbers));
